@@ -1,0 +1,54 @@
+135.0
+.FE.FF...
+======================================================================
+ERROR: test_average_single_mark (__main__.TestStudentUtils.test_average_single_mark)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/content/test_student_utils.py", line 17, in test_average_single_mark
+    calculate_average([40]),
+    ~~~~~~~~~~~~~~~~~^^^^^^
+  File "/content/student_utils.py", line 10, in calculate_average
+    return total / (len(marks) - 1)
+           ~~~~~~^~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+======================================================================
+FAIL: test_average_of_three_marks (__main__.TestStudentUtils.test_average_of_three_marks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/content/test_student_utils.py", line 10, in test_average_of_three_marks
+    self.assertEqual(
+    ~~~~~~~~~~~~~~~~^
+        calculate_average([80, 90, 100]),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        90.0
+        ^^^^
+    )
+    ^
+AssertionError: 135.0 != 90.0
+
+======================================================================
+FAIL: test_distinction (__main__.TestStudentUtils.test_distinction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/content/test_student_utils.py", line 31, in test_distinction
+    self.assertEqual(get_grade(95), "Distinction")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'First' != 'Distinction'
+- First
++ Distinction
+
+
+======================================================================
+FAIL: test_exact_pass_mark (__main__.TestStudentUtils.test_exact_pass_mark)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/content/test_student_utils.py", line 25, in test_exact_pass_mark
+    self.assertEqual(is_passing(40), True)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False != True
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.006s
+
+FAILED (failures=3, errors=1)

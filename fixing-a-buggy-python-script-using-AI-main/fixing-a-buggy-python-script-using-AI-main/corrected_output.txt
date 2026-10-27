@@ -1,0 +1,34 @@
+90.0
+.......FF
+======================================================================
+FAIL: test_first (__main__.TestStudentUtils.test_first)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/content/test_student_utils.py", line 34, in test_first
+    self.assertEqual(get_grade(60), "First")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'first' != 'First'
+- first
+? ^
++ First
+? ^
+
+
+======================================================================
+FAIL: test_second (__main__.TestStudentUtils.test_second)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/content/test_student_utils.py", line 37, in test_second
+    self.assertEqual(get_grade(45), "Second")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'second' != 'Second'
+- second
+? ^
++ Second
+? ^
+
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.002s
+
+FAILED (failures=2)
